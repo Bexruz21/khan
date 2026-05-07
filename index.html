@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khan — Marketing Company</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -2127,6 +2128,14 @@
                 display: none
             }
         }
+        .header-logo {
+            width: 40%;
+            justify-content: center;
+        }
+        .hv-logo {
+            justify-content: center;
+            transform: translateX(20px);
+        }
     </style>
 </head>
 
@@ -2215,12 +2224,12 @@
                 <div class="hv-ring r3"></div>
                 <div class="hv-center">
                     <div class="hv-logo">
-                        khan
+                        <img src="./logo.png" class="header-logo" alt="">
                         <svg class="hv-logo-star" viewBox="0 0 24 24">
                             <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z" />
                         </svg>
                     </div>
-                    <div class="hv-sub-txt">marketing company</div>
+                    <!-- <div class="hv-sub-txt">marketing company</div> -->
                 </div>
                 <div class="hv-float f1">
                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -2324,29 +2333,34 @@
                 <div class="srv-card">
                     <div class="srv-num">04</div>
                     <div class="srv-icon">
+                        
                         <svg viewBox="0 0 24 24">
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
                         </svg>
                     </div>
-                    <div class="srv-name">Перформанс-маркетинг</div>
-                    <p class="srv-txt">Таргетированная реклама в Google, Meta, TikTok и других платформах с фокусом на
-                        максимальный ROI и снижение стоимости клиента.</p>
-                    <div class="srv-arrow"><svg viewBox="0 0 24 24">
+                    <div class="srv-name">Комплекс-маркетинг</div>
+                    <p class="srv-txt">Полный набор маркетинговых действий, которые помогают бизнесу привлекать клиентов, продавать и развивать бренд системно.</p>
+                    <div class="srv-arrow">
+                        
+                        <svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg></div>
+                        </svg>
+                    </div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-num">05</div>
                     <div class="srv-icon">
-                        <svg viewBox="0 0 24 24">
+                        <i class="fa-solid fa-video"></i>
+                        <!-- <svg viewBox="0 0 24 24">
                             <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" />
                             <polyline points="14 2 14 8 20 8" />
-                        </svg>
+                        </svg> -->
                     </div>
                     <div class="srv-name">Контент-продакшн</div>
                     <p class="srv-txt">Фото, видео, текст, графика — всё это мы создаём под ключ. Контент, который
                         вовлекает и продаёт на каждом этапе воронки.</p>
-                    <div class="srv-arrow"><svg viewBox="0 0 24 24">
+                    <div class="srv-arrow">
+                        <svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></div>
                 </div>
@@ -2388,7 +2402,7 @@
                 <div class="about-content">
                     <div class="s-tag rv">Кто мы</div>
                     <h2 class="s-title rv d1">О компании<br><span class="dim">Khan</span></h2>
-                    <p class="about-txt rv d2">Khan — это современное маркетинговое агентство, специализирующееся на
+                    <p class="about-txt rv d2">Khan — это современная маркетинговая компания, специализирующаяся на
                         построении премиального цифрового присутствия для амбициозных брендов. Мы объединяем глубокую
                         стратегию, передовые технологии и высокую креативность, чтобы помогать бизнесу расти быстрее.
                     </p>
@@ -2400,7 +2414,7 @@
                                 </svg></div>
                             <div>
                                 <div class="ab-feat-ttl">Прозрачная отчётность</div>
-                                <div class="ab-feat-sub">Еженедельные отчёты по всем KPI и каналам</div>
+                                <div class="ab-feat-sub">Ежемесячные отчёты по всем KPI и каналам</div>
                             </div>
                         </div>
                         <div class="ab-feat">
@@ -2917,14 +2931,12 @@
         const cObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('[data-t]').forEach(animCount); cObs.unobserve(e.target) } }), { threshold: .3 });
         document.querySelectorAll('.ab-stats').forEach(el => cObs.observe(el));
 
-        // PARALLAX
         window.addEventListener('scroll', () => {
             const y = scrollY;
             const hv = document.querySelector('.hv');
             if (hv) hv.style.transform = `translateY(${y * .08}px)`;
         });
 
-        // FORM
         async function sendForm(e) {
             e.preventDefault();
             const btn = document.getElementById('sbtn'), lr = document.getElementById('lr'), st = document.getElementById('stxt');
@@ -2947,5 +2959,4 @@
         }
     </script>
 </body>
-
 </html>
