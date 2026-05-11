@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khan — Marketing Company</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -18,6 +20,7 @@
             padding: 0;
             box-sizing: border-box
         }
+
         :root {
             --p: #230F64;
             --pm: #3B1FA0;
@@ -52,7 +55,6 @@
             color: #fff
         }
 
-        /* SCROLLBAR */
         ::-webkit-scrollbar {
             width: 3px
         }
@@ -89,6 +91,43 @@
             z-index: 9998;
             transform: translate(-50%, -50%);
             transition: width .3s, height .3s, border-color .3s
+        }
+
+        /* ── LANG SWITCHER ── */
+        .lang-switcher {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--wb);
+            border-radius: 100px;
+            padding: 4px
+        }
+
+        .lang-btn {
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--wd);
+            cursor: none;
+            border: none;
+            background: transparent;
+            transition: all .25s;
+            font-family: var(--fb)
+        }
+
+        .lang-btn.active {
+            background: var(--pb);
+            color: #fff;
+            box-shadow: 0 0 12px var(--pg)
+        }
+
+        .lang-btn:hover:not(.active) {
+            color: #fff;
+            background: rgba(255, 255, 255, .08)
         }
 
         /* NAV */
@@ -133,6 +172,12 @@
             height: 14px;
             animation: starspin 10s linear infinite;
             fill: #fff
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px
         }
 
         .nav-links {
@@ -258,13 +303,24 @@
             color: rgba(107, 63, 231, .8)
         }
 
+        .mob-lang {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px
+        }
+
+        .mob-lang .lang-btn {
+            font-size: 14px;
+            padding: 8px 20px
+        }
+
         @keyframes starspin {
             to {
                 transform: rotate(360deg)
             }
         }
 
-        /* NOISE OVERLAY */
+        /* NOISE */
         .noise {
             position: fixed;
             inset: 0;
@@ -275,7 +331,7 @@
             background-size: 200px
         }
 
-        /* ── HERO ── */
+        /* HERO */
         #hero {
             min-height: 100vh;
             display: flex;
@@ -588,7 +644,14 @@
             line-height: 1;
             display: flex;
             align-items: flex-start;
-            gap: 6px
+            gap: 6px;
+            justify-content: center
+        }
+
+        .header-logo {
+            width: 40%;
+            justify-content: center;
+            transform: translateX(20px);
         }
 
         .hv-logo-star {
@@ -598,15 +661,6 @@
             animation: starspin 8s linear infinite;
             margin-top: 6px;
             flex-shrink: 0
-        }
-
-        .hv-sub-txt {
-            font-size: 11px;
-            letter-spacing: 4px;
-            color: var(--wd);
-            text-transform: uppercase;
-            font-weight: 500;
-            margin-top: 10px
         }
 
         .hv-float {
@@ -697,7 +751,7 @@
             }
         }
 
-        /* SECTION COMMON */
+        /* SECTIONS */
         section {
             position: relative;
             overflow: hidden
@@ -787,7 +841,7 @@
             transition-delay: .48s
         }
 
-        /* ── SERVICES ── */
+        /* SERVICES */
         #services {
             background: var(--bg)
         }
@@ -841,7 +895,7 @@
             font-family: var(--fd);
             font-size: 10px;
             font-weight: 700;
-            color: rgba(255, 255, 255, 0.500);
+            color: rgba(255, 255, 255, .5);
             letter-spacing: 2px;
             margin-bottom: 28px
         }
@@ -920,7 +974,7 @@
             transform: translateX(0)
         }
 
-        /* ── ABOUT ── */
+        /* ABOUT */
         #about {
             background: var(--bg2)
         }
@@ -1117,7 +1171,7 @@
             letter-spacing: .3px
         }
 
-        /* ── ADVANTAGES ── */
+        /* ADVANTAGES */
         #adv {
             background: var(--bg)
         }
@@ -1236,11 +1290,11 @@
             font-family: var(--fd);
             font-size: 11px;
             font-weight: 700;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, .5);
             letter-spacing: 1px
         }
 
-        /* ── HIGHLIGHTS ── */
+        /* HIGHLIGHTS */
         #hl {
             background: var(--bg2);
             padding: 130px 72px
@@ -1271,7 +1325,6 @@
             align-items: start
         }
 
-        /* Left column */
         .hl-col-left {
             display: flex;
             flex-direction: column;
@@ -1279,7 +1332,6 @@
             padding-top: 48px
         }
 
-        /* Right column */
         .hl-col-right {
             display: flex;
             flex-direction: column;
@@ -1287,7 +1339,6 @@
             padding-top: 80px
         }
 
-        /* Center column */
         .hl-col-center {
             display: flex;
             flex-direction: column;
@@ -1312,7 +1363,6 @@
             box-shadow: 0 24px 60px rgba(107, 63, 231, .25)
         }
 
-        /* Card types */
         .hl-card.type-tall {
             padding: 48px 36px;
             min-height: 320px;
@@ -1329,25 +1379,12 @@
             justify-content: space-between
         }
 
-        .hl-card.type-sq {
-            padding: 44px 36px;
-            aspect-ratio: 1/1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between
-        }
-
         .hl-card.type-hero {
             padding: 56px 44px;
             min-height: 380px;
             display: flex;
             flex-direction: column;
             justify-content: space-between
-        }
-
-        /* Background styles */
-        .hl-bg-dark {
-            background: var(--bg3)
         }
 
         .hl-bg-purple {
@@ -1542,7 +1579,6 @@
             color: rgba(255, 255, 255, .8)
         }
 
-        /* Orbit visual in card */
         .hl-orbit {
             position: relative;
             width: 100px;
@@ -1601,7 +1637,7 @@
             stroke-linecap: round
         }
 
-        /* ── PROCESS ── */
+        /* PROCESS */
         #process {
             background: var(--bg)
         }
@@ -1701,7 +1737,7 @@
             color: var(--wd)
         }
 
-        /* ── CONTACT ── */
+        /* CONTACT */
         #contact {
             background: var(--bg2)
         }
@@ -1711,12 +1747,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: start
-        }
-
-        .cont-left {}
-
-        .cont-left .s-desc {
-            margin-bottom: 44px
         }
 
         .ci-item {
@@ -1896,7 +1926,7 @@
             animation: spin1 .7s linear infinite
         }
 
-        /* ── FOOTER ── */
+        /* FOOTER */
         footer {
             padding: 48px 72px;
             border-top: 1px solid var(--wb);
@@ -2032,8 +2062,7 @@
             }
 
             .hl-grid {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto
+                grid-template-columns: 1fr 1fr
             }
 
             .hl-col-left,
@@ -2058,6 +2087,10 @@
             .flinks {
                 justify-content: center
             }
+
+            .nav-right {
+                gap: 10px
+            }
         }
 
         @media(max-width:768px) {
@@ -2070,7 +2103,8 @@
             }
 
             .nav-links,
-            .nc {
+            .nc,
+            .lang-switcher {
                 display: none
             }
 
@@ -2128,14 +2162,6 @@
                 display: none
             }
         }
-        .header-logo {
-            width: 40%;
-            justify-content: center;
-        }
-        .hv-logo {
-            justify-content: center;
-            transform: translateX(20px);
-        }
     </style>
 </head>
 
@@ -2146,12 +2172,17 @@
 
     <!-- MOBILE MENU -->
     <div class="mob-menu" id="mobMenu">
-        <a href="#services" onclick="cM()">Услуги</a>
-        <a href="#about" onclick="cM()">О нас</a>
-        <a href="#adv" onclick="cM()">Преимущества</a>
-        <a href="#hl" onclick="cM()">Разделы</a>
-        <a href="#process" onclick="cM()">Процесс</a>
-        <a href="#contact" onclick="cM()">Контакты</a>
+        <a href="#services" onclick="cM()" data-i18n="nav.services">Услуги</a>
+        <a href="#about" onclick="cM()" data-i18n="nav.about">О нас</a>
+        <a href="#adv" onclick="cM()" data-i18n="nav.adv">Преимущества</a>
+        <a href="#hl" onclick="cM()" data-i18n="nav.hl">Разделы</a>
+        <a href="#process" onclick="cM()" data-i18n="nav.process">Процесс</a>
+        <a href="#contact" onclick="cM()" data-i18n="nav.contact">Контакты</a>
+        <div class="mob-lang">
+            <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+            <button class="lang-btn" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('uz')">UZ</button>
+        </div>
     </div>
 
     <!-- NAV -->
@@ -2163,20 +2194,27 @@
             </svg>
         </a>
         <ul class="nav-links">
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#adv">Преимущества</a></li>
-            <li><a href="#hl">Разделы</a></li>
-            <li><a href="#process">Процесс</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#services" data-i18n="nav.services">Услуги</a></li>
+            <li><a href="#about" data-i18n="nav.about">О нас</a></li>
+            <li><a href="#adv" data-i18n="nav.adv">Преимущества</a></li>
+            <li><a href="#hl" data-i18n="nav.hl">Разделы</a></li>
+            <li><a href="#process" data-i18n="nav.process">Процесс</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
         </ul>
-        <a href="#contact" class="nc">Начать работу</a>
+        <div class="nav-right">
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+                <button class="lang-btn" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" onclick="setLang('uz')">UZ</button>
+            </div>
+            <a href="#contact" class="nc" data-i18n="nav.cta">Начать работу</a>
+        </div>
         <button class="bur" id="bur" onclick="tM()" aria-label="Меню">
             <span></span><span></span><span></span>
         </button>
     </nav>
 
-    <!-- ═══ HERO ═══ -->
+    <!-- HERO -->
     <section id="hero">
         <div class="hero-bg">
             <div class="hero-grad1"></div>
@@ -2185,35 +2223,39 @@
         </div>
         <div class="hero-inner">
             <div>
-                <div class="h-badge"><span class="h-dot"></span>Премиум маркетинговое агентство</div>
+                <div class="h-badge"><span class="h-dot"></span><span data-i18n="hero.badge">Премиум маркетинговое
+                        агентство</span></div>
                 <h1 class="h-title">
                     Khan<br>
                     <span class="t-outline">Mar</span><span class="t-purple">ke</span><span
                         class="t-outline">ting</span>
                 </h1>
-                <p class="h-sub">Мы строим мощные цифровые системы, бренды и маркетинговые механизмы для амбициозных
-                    компаний. Стратегия, технологии, результат.</p>
+                <p class="h-sub" data-i18n="hero.sub">Мы строим мощные цифровые системы, бренды и маркетинговые
+                    механизмы для амбициозных компаний. Стратегия, технологии, результат.</p>
                 <div class="h-btns">
-                    <a href="#contact" class="btn-p">Начать проект <svg width="16" height="16" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <a href="#contact" class="btn-p">
+                        <span data-i18n="hero.btn1">Начать проект</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round">
                             <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg></a>
-                    <a href="#services" class="btn-g">Наши услуги</a>
+                        </svg>
+                    </a>
+                    <a href="#services" class="btn-g" data-i18n="hero.btn2">Наши услуги</a>
                 </div>
                 <div class="h-metrics">
                     <div class="hm-item">
                         <span class="hm-num">150<span>+</span></span>
-                        <span class="hm-lbl">Проектов</span>
+                        <span class="hm-lbl" data-i18n="hero.m1">Проектов</span>
                     </div>
                     <div class="hm-div"></div>
                     <div class="hm-item">
                         <span class="hm-num">98<span>%</span></span>
-                        <span class="hm-lbl">Довольных клиентов</span>
+                        <span class="hm-lbl" data-i18n="hero.m2">Довольных клиентов</span>
                     </div>
                     <div class="hm-div"></div>
                     <div class="hm-item">
                         <span class="hm-num">5<span>+</span></span>
-                        <span class="hm-lbl">Лет на рынке</span>
+                        <span class="hm-lbl" data-i18n="hero.m3">Лет на рынке</span>
                     </div>
                 </div>
             </div>
@@ -2224,29 +2266,22 @@
                 <div class="hv-ring r3"></div>
                 <div class="hv-center">
                     <div class="hv-logo">
-                        <img src="./logo.png" class="header-logo" alt="">
+                        <img src="./logo.png" class="header-logo" alt="Khan">
                         <svg class="hv-logo-star" viewBox="0 0 24 24">
                             <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z" />
                         </svg>
                     </div>
-                    <!-- <div class="hv-sub-txt">marketing company</div> -->
                 </div>
-                <div class="hv-float f1">
-                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <div class="hv-float f1"><svg width="36" height="36" viewBox="0 0 36 36" fill="none">
                         <path d="M18 2L20 16L34 18L20 20L18 34L16 20L2 18L16 16Z" fill="rgba(255,255,255,0.7)" />
-                    </svg>
-                </div>
-                <div class="hv-float f2">
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    </svg></div>
+                <div class="hv-float f2"><svg width="22" height="22" viewBox="0 0 22 22" fill="none">
                         <path d="M11 1L12.5 9.5L21 11L12.5 12.5L11 21L9.5 12.5L1 11L9.5 9.5Z"
                             fill="rgba(255,255,255,0.4)" />
-                    </svg>
-                </div>
-                <div class="hv-float f3">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    </svg></div>
+                <div class="hv-float f3"><svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M7 1L8 6L13 7L8 8L7 13L6 8L1 7L6 6Z" fill="rgba(255,255,255,0.5)" />
-                    </svg>
-                </div>
+                    </svg></div>
             </div>
         </div>
     </section>
@@ -2254,127 +2289,111 @@
     <!-- MARQUEE -->
     <div class="mq">
         <div class="mq-track" id="mqt">
-            <span class="mq-item">Брендинг</span>
-            <span class="mq-item">SMM-маркетинг</span>
-            <span class="mq-item">Веб-дизайн</span>
-            <span class="mq-item">Перформанс-реклама</span>
-            <span class="mq-item">Контент-продакшн</span>
-            <span class="mq-item">SEO-продвижение</span>
-            <span class="mq-item">Стратегия</span>
-            <span class="mq-item">Аналитика</span>
-            <span class="mq-item">Брендинг</span>
-            <span class="mq-item">SMM-маркетинг</span>
-            <span class="mq-item">Веб-дизайн</span>
-            <span class="mq-item">Перформанс-реклама</span>
-            <span class="mq-item">Контент-продакшн</span>
-            <span class="mq-item">SEO-продвижение</span>
-            <span class="mq-item">Стратегия</span>
-            <span class="mq-item">Аналитика</span>
+            <span class="mq-item" data-i18n="mq.1">Брендинг</span>
+            <span class="mq-item" data-i18n="mq.2">SMM-маркетинг</span>
+            <span class="mq-item" data-i18n="mq.3">Веб-дизайн</span>
+            <span class="mq-item" data-i18n="mq.4">Перформанс-реклама</span>
+            <span class="mq-item" data-i18n="mq.5">Контент-продакшн</span>
+            <span class="mq-item" data-i18n="mq.6">SEO-продвижение</span>
+            <span class="mq-item" data-i18n="mq.7">Стратегия</span>
+            <span class="mq-item" data-i18n="mq.8">Аналитика</span>
+            <span class="mq-item" data-i18n="mq.1">Брендинг</span>
+            <span class="mq-item" data-i18n="mq.2">SMM-маркетинг</span>
+            <span class="mq-item" data-i18n="mq.3">Веб-дизайн</span>
+            <span class="mq-item" data-i18n="mq.4">Перформанс-реклама</span>
+            <span class="mq-item" data-i18n="mq.5">Контент-продакшн</span>
+            <span class="mq-item" data-i18n="mq.6">SEO-продвижение</span>
+            <span class="mq-item" data-i18n="mq.7">Стратегия</span>
+            <span class="mq-item" data-i18n="mq.8">Аналитика</span>
         </div>
     </div>
 
-    <!-- ═══ SERVICES ═══ -->
+    <!-- SERVICES -->
     <section id="services" class="sec-pad">
         <div class="sec-max">
             <div class="srv-head">
                 <div class="rv">
-                    <div class="s-tag">Что мы делаем</div>
-                    <h2 class="s-title">Услуги, которые <span class="dim">дают результат</span></h2>
+                    <div class="s-tag" data-i18n="srv.tag">Что мы делаем</div>
+                    <h2 class="s-title"><span data-i18n="srv.title">Услуги, которые</span> <span class="dim"
+                            data-i18n="srv.title2">дают результат</span></h2>
                 </div>
-                <a href="#contact" class="btn-g rv d2">Обсудить проект →</a>
+                <a href="#contact" class="btn-g rv d2" data-i18n="srv.cta">Обсудить проект →</a>
             </div>
             <div class="srv-grid rv">
                 <div class="srv-card">
                     <div class="srv-num">01</div>
-                    <div class="srv-icon">
-                        <svg viewBox="0 0 24 24">
+                    <div class="srv-icon"><svg viewBox="0 0 24 24">
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                        </svg>
-                    </div>
-                    <div class="srv-name">Брендинг</div>
-                    <p class="srv-txt">Создаём уникальные фирменные стили и визуальные идентичности, которые
-                        запоминаются и выделяют вас среди конкурентов.</p>
+                        </svg></div>
+                    <div class="srv-name" data-i18n="srv.s1.name">Брендинг</div>
+                    <p class="srv-txt" data-i18n="srv.s1.txt">Создаём уникальные фирменные стили и визуальные
+                        идентичности, которые запоминаются и выделяют вас среди конкурентов.</p>
                     <div class="srv-arrow"><svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-num">02</div>
-                    <div class="srv-icon">
-                        <svg viewBox="0 0 24 24">
+                    <div class="srv-icon"><svg viewBox="0 0 24 24">
                             <rect x="2" y="2" width="9" height="9" rx="1" />
                             <rect x="13" y="2" width="9" height="9" rx="1" />
                             <rect x="2" y="13" width="9" height="9" rx="1" />
                             <rect x="13" y="13" width="9" height="9" rx="1" />
-                        </svg>
-                    </div>
-                    <div class="srv-name">SMM-маркетинг</div>
-                    <p class="srv-txt">Стратегическое ведение социальных сетей: контент, таргетинг, вовлечённость и рост
-                        подписчиков для вашего бизнеса.</p>
+                        </svg></div>
+                    <div class="srv-name" data-i18n="srv.s2.name">SMM-маркетинг</div>
+                    <p class="srv-txt" data-i18n="srv.s2.txt">Стратегическое ведение социальных сетей: контент,
+                        таргетинг, вовлечённость и рост подписчиков для вашего бизнеса.</p>
                     <div class="srv-arrow"><svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-num">03</div>
-                    <div class="srv-icon">
-                        <svg viewBox="0 0 24 24">
+                    <div class="srv-icon"><svg viewBox="0 0 24 24">
                             <rect x="2" y="3" width="20" height="14" rx="2" />
                             <path d="M8 21h8M12 17v4" />
-                        </svg>
-                    </div>
-                    <div class="srv-name">Веб-дизайн</div>
-                    <p class="srv-txt">Сайты и лендинги премиум-уровня с детальной проработкой UX/UI, высокой конверсией
-                        и безупречной производительностью.</p>
+                        </svg></div>
+                    <div class="srv-name" data-i18n="srv.s3.name">Веб-дизайн</div>
+                    <p class="srv-txt" data-i18n="srv.s3.txt">Сайты и лендинги премиум-уровня с детальной проработкой
+                        UX/UI, высокой конверсией и безупречной производительностью.</p>
                     <div class="srv-arrow"><svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-num">04</div>
-                    <div class="srv-icon">
-                        
-                        <svg viewBox="0 0 24 24">
+                    <div class="srv-icon"><svg viewBox="0 0 24 24">
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                        </svg>
-                    </div>
-                    <div class="srv-name">Комплекс-маркетинг</div>
-                    <p class="srv-txt">Полный набор маркетинговых действий, которые помогают бизнесу привлекать клиентов, продавать и развивать бренд системно.</p>
-                    <div class="srv-arrow">
-                        
-                        <svg viewBox="0 0 24 24">
+                        </svg></div>
+                    <div class="srv-name" data-i18n="srv.s4.name">Комплекс-маркетинг</div>
+                    <p class="srv-txt" data-i18n="srv.s4.txt">Полный набор маркетинговых действий, которые помогают
+                        бизнесу привлекать клиентов, продавать и развивать бренд системно.</p>
+                    <div class="srv-arrow"><svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </div>
+                        </svg></div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-num">05</div>
-                    <div class="srv-icon">
-                        <i class="fa-solid fa-video"></i>
-                        <!-- <svg viewBox="0 0 24 24">
+                    <div class="srv-icon"><svg viewBox="0 0 24 24">
                             <path d="M14.5 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V7.5L14.5 2z" />
                             <polyline points="14 2 14 8 20 8" />
-                        </svg> -->
-                    </div>
-                    <div class="srv-name">Контент-продакшн</div>
-                    <p class="srv-txt">Фото, видео, текст, графика — всё это мы создаём под ключ. Контент, который
-                        вовлекает и продаёт на каждом этапе воронки.</p>
-                    <div class="srv-arrow">
-                        <svg viewBox="0 0 24 24">
+                        </svg></div>
+                    <div class="srv-name" data-i18n="srv.s5.name">Контент-продакшн</div>
+                    <p class="srv-txt" data-i18n="srv.s5.txt">Фото, видео, текст, графика — всё это мы создаём под ключ.
+                        Контент, который вовлекает и продаёт на каждом этапе воронки.</p>
+                    <div class="srv-arrow"><svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></div>
                 </div>
                 <div class="srv-card">
                     <div class="srv-num">06</div>
-                    <div class="srv-icon">
-                        <svg viewBox="0 0 24 24">
+                    <div class="srv-icon"><svg viewBox="0 0 24 24">
                             <circle cx="11" cy="11" r="8" />
                             <path d="M21 21l-4.35-4.35" />
-                        </svg>
-                    </div>
-                    <div class="srv-name">SEO-оптимизация</div>
-                    <p class="srv-txt">Технический аудит, семантика, линкбилдинг и контент-стратегия для устойчивого
-                        органического роста в поисковых системах.</p>
+                        </svg></div>
+                    <div class="srv-name" data-i18n="srv.s6.name">SEO-оптимизация</div>
+                    <p class="srv-txt" data-i18n="srv.s6.txt">Технический аудит, семантика, линкбилдинг и
+                        контент-стратегия для устойчивого органического роста в поисковых системах.</p>
                     <div class="srv-arrow"><svg viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg></div>
@@ -2383,7 +2402,7 @@
         </div>
     </section>
 
-    <!-- ═══ ABOUT ═══ -->
+    <!-- ABOUT -->
     <section id="about" class="sec-pad">
         <div class="sec-max">
             <div class="about-in">
@@ -2400,12 +2419,13 @@
                     </div>
                 </div>
                 <div class="about-content">
-                    <div class="s-tag rv">Кто мы</div>
-                    <h2 class="s-title rv d1">О компании<br><span class="dim">Khan</span></h2>
-                    <p class="about-txt rv d2">Khan — это современная маркетинговая компания, специализирующаяся на
-                        построении премиального цифрового присутствия для амбициозных брендов. Мы объединяем глубокую
-                        стратегию, передовые технологии и высокую креативность, чтобы помогать бизнесу расти быстрее.
-                    </p>
+                    <div class="s-tag rv" data-i18n="about.tag">Кто мы</div>
+                    <h2 class="s-title rv d1"><span data-i18n="about.title">О компании</span><br><span
+                            class="dim">Khan</span></h2>
+                    <p class="about-txt rv d2" data-i18n="about.txt">Khan — это современная маркетинговая компания,
+                        специализирующаяся на построении премиального цифрового присутствия для амбициозных брендов. Мы
+                        объединяем глубокую стратегию, передовые технологии и высокую креативность, чтобы помогать
+                        бизнесу расти быстрее.</p>
                     <div class="ab-feats rv d3">
                         <div class="ab-feat">
                             <div class="ab-feat-ic"><svg viewBox="0 0 24 24">
@@ -2413,8 +2433,9 @@
                                     <polyline points="22 4 12 14.01 9 11.01" />
                                 </svg></div>
                             <div>
-                                <div class="ab-feat-ttl">Прозрачная отчётность</div>
-                                <div class="ab-feat-sub">Ежемесячные отчёты по всем KPI и каналам</div>
+                                <div class="ab-feat-ttl" data-i18n="about.f1.t">Прозрачная отчётность</div>
+                                <div class="ab-feat-sub" data-i18n="about.f1.s">Ежемесячные отчёты по всем KPI и каналам
+                                </div>
                             </div>
                         </div>
                         <div class="ab-feat">
@@ -2423,8 +2444,9 @@
                                     <polyline points="17 6 23 6 23 12" />
                                 </svg></div>
                             <div>
-                                <div class="ab-feat-ttl">Ориентация на результат</div>
-                                <div class="ab-feat-sub">Каждое решение измеримо и подкреплено данными</div>
+                                <div class="ab-feat-ttl" data-i18n="about.f2.t">Ориентация на результат</div>
+                                <div class="ab-feat-sub" data-i18n="about.f2.s">Каждое решение измеримо и подкреплено
+                                    данными</div>
                             </div>
                         </div>
                         <div class="ab-feat">
@@ -2434,8 +2456,8 @@
                                     <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
                                 </svg></div>
                             <div>
-                                <div class="ab-feat-ttl">Команда экспертов</div>
-                                <div class="ab-feat-sub">Специалисты с опытом в 10+ нишах</div>
+                                <div class="ab-feat-ttl" data-i18n="about.f3.t">Команда экспертов</div>
+                                <div class="ab-feat-sub" data-i18n="about.f3.s">Специалисты с опытом в 10+ нишах</div>
                             </div>
                         </div>
                         <div class="ab-feat">
@@ -2444,132 +2466,120 @@
                                     <polyline points="12 6 12 12 16 14" />
                                 </svg></div>
                             <div>
-                                <div class="ab-feat-ttl">Быстрый запуск</div>
-                                <div class="ab-feat-sub">Первые результаты уже через 2 недели работы</div>
+                                <div class="ab-feat-ttl" data-i18n="about.f4.t">Быстрый запуск</div>
+                                <div class="ab-feat-sub" data-i18n="about.f4.s">Первые результаты уже через 2 недели
+                                    работы</div>
                             </div>
                         </div>
                     </div>
                     <div class="ab-stats rv d4">
                         <div class="ab-stat"><span class="ab-stat-n" data-t="150" data-s="+">0+</span><span
-                                class="ab-stat-l">Завершённых проектов</span></div>
+                                class="ab-stat-l" data-i18n="about.st1">Завершённых проектов</span></div>
                         <div class="ab-stat"><span class="ab-stat-n" data-t="98" data-s="%">0%</span><span
-                                class="ab-stat-l">Довольных клиентов</span></div>
+                                class="ab-stat-l" data-i18n="about.st2">Довольных клиентов</span></div>
                         <div class="ab-stat"><span class="ab-stat-n" data-t="5" data-s="+">0+</span><span
-                                class="ab-stat-l">Лет на рынке</span></div>
+                                class="ab-stat-l" data-i18n="about.st3">Лет на рынке</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══ ADVANTAGES ═══ -->
+    <!-- ADVANTAGES -->
     <section id="adv" class="sec-pad">
         <div class="sec-max">
             <div class="adv-in">
                 <div class="adv-left">
-                    <div class="s-tag rv">Почему Khan</div>
-                    <h2 class="s-title rv d1">Наши<br><span class="dim">преимущества</span></h2>
-                    <p class="s-desc rv d2">Мы не просто подрядчик — мы стратегический партнёр, который глубоко
-                        погружается в ваш бизнес и создаёт маркетинговые системы, которые работают без вашего
-                        постоянного контроля.</p>
+                    <div class="s-tag rv" data-i18n="adv.tag">Почему Khan</div>
+                    <h2 class="s-title rv d1"><span data-i18n="adv.title">Наши</span><br><span class="dim"
+                            data-i18n="adv.title2">преимущества</span></h2>
+                    <p class="s-desc rv d2" data-i18n="adv.desc">Мы не просто подрядчик — мы стратегический партнёр,
+                        который глубоко погружается в ваш бизнес и создаёт маркетинговые системы, которые работают без
+                        вашего постоянного контроля.</p>
                     <div class="adv-big-num rv d3">07</div>
                 </div>
                 <div class="adv-list">
                     <div class="adv-item rv d1">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Надёжность и прозрачность</h4>
-                            <p>Вы всегда знаете, что происходит с вашим бюджетом. Никаких скрытых платежей и размытых
-                                отчётов — только чёткие цифры и реальные результаты.</p>
+                            <h4 data-i18n="adv.i1.t">Надёжность и прозрачность</h4>
+                            <p data-i18n="adv.i1.p">Вы всегда знаете, что происходит с вашим бюджетом. Никаких скрытых
+                                платежей и размытых отчётов — только чёткие цифры и реальные результаты.</p>
                         </div>
                         <span class="adv-idx">01</span>
                     </div>
                     <div class="adv-item rv d2">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <path d="M2 20h.01M7 20v-4" />
                                 <path d="M12 20v-8" />
                                 <path d="M17 20V8" />
                                 <path d="M22 4v16" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Измеримые KPI</h4>
-                            <p>Каждая кампания запускается с чёткими целями и ключевыми метриками. Мы фокусируемся на
-                                тех показателях, которые реально влияют на ваш доход.</p>
+                            <h4 data-i18n="adv.i2.t">Измеримые KPI</h4>
+                            <p data-i18n="adv.i2.p">Каждая кампания запускается с чёткими целями и ключевыми метриками.
+                                Мы фокусируемся на тех показателях, которые реально влияют на ваш доход.</p>
                         </div>
                         <span class="adv-idx">02</span>
                     </div>
                     <div class="adv-item rv d3">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="3" />
                                 <path
                                     d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Индивидуальный подход</h4>
-                            <p>Нет шаблонных решений. Мы изучаем ваш бизнес, рынок и аудиторию, чтобы создать стратегию,
-                                которая работает именно для вас.</p>
+                            <h4 data-i18n="adv.i3.t">Индивидуальный подход</h4>
+                            <p data-i18n="adv.i3.p">Нет шаблонных решений. Мы изучаем ваш бизнес, рынок и аудиторию,
+                                чтобы создать стратегию, которая работает именно для вас.</p>
                         </div>
                         <span class="adv-idx">03</span>
                     </div>
                     <div class="adv-item rv d4">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Скорость запуска</h4>
-                            <p>От первой встречи до старта рекламных кампаний — не более 7 рабочих дней. Быстрый
-                                онбординг без лишней бюрократии.</p>
+                            <h4 data-i18n="adv.i4.t">Скорость запуска</h4>
+                            <p data-i18n="adv.i4.p">От первой встречи до старта рекламных кампаний — не более 7 рабочих
+                                дней. Быстрый онбординг без лишней бюрократии.</p>
                         </div>
                         <span class="adv-idx">04</span>
                     </div>
                     <div class="adv-item rv d5">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z" />
                                 <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Экспертиза в 10+ нишах</h4>
-                            <p>E-commerce, B2B, недвижимость, HoReCa, медицина, образование — у нас есть реальный опыт и
-                                кейсы в вашей индустрии.</p>
+                            <h4 data-i18n="adv.i5.t">Экспертиза в 10+ нишах</h4>
+                            <p data-i18n="adv.i5.p">E-commerce, B2B, недвижимость, HoReCa, медицина, образование — у нас
+                                есть реальный опыт и кейсы в вашей индустрии.</p>
                         </div>
                         <span class="adv-idx">05</span>
                     </div>
                     <div class="adv-item rv d6">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Выделенный менеджер</h4>
-                            <p>Один контакт — полная ответственность. Ваш менеджер на связи 5 дней в неделю и
-                                координирует всю команду внутри Khan.</p>
+                            <h4 data-i18n="adv.i6.t">Выделенный менеджер</h4>
+                            <p data-i18n="adv.i6.p">Один контакт — полная ответственность. Ваш менеджер на связи 5 дней
+                                в неделю и координирует всю команду внутри Khan.</p>
                         </div>
                         <span class="adv-idx">06</span>
                     </div>
                     <div class="adv-item rv d2">
-                        <div class="adv-ic">
-                            <svg viewBox="0 0 24 24">
+                        <div class="adv-ic"><svg viewBox="0 0 24 24">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                                 <path d="M9 12l2 2 4-4" />
-                            </svg>
-                        </div>
+                            </svg></div>
                         <div class="adv-content">
-                            <h4>Гарантия качества</h4>
-                            <p>Если результаты не соответствуют согласованным KPI в первый месяц, мы продолжаем работу
-                                за свой счёт до их достижения.</p>
+                            <h4 data-i18n="adv.i7.t">Гарантия качества</h4>
+                            <p data-i18n="adv.i7.p">Если результаты не соответствуют согласованным KPI в первый месяц,
+                                мы продолжаем работу за свой счёт до их достижения.</p>
                         </div>
                         <span class="adv-idx">07</span>
                     </div>
@@ -2578,46 +2588,44 @@
         </div>
     </section>
 
-    <!-- ═══ HIGHLIGHTS ═══ -->
+    <!-- HIGHLIGHTS -->
     <section id="hl">
         <div class="sec-max">
             <div class="hl-head rv">
-                <div class="s-tag" style="justify-content:center">Навигация</div>
-                <h2 class="s-title">Разделы сайта<br><em>Khan</em></h2>
+                <div class="s-tag" style="justify-content:center" data-i18n="hl.tag">Навигация</div>
+                <h2 class="s-title"><span data-i18n="hl.title">Разделы сайта</span><br><em>Khan</em></h2>
             </div>
             <div class="hl-grid">
-                <!-- LEFT COLUMN -->
                 <div class="hl-col-left">
-                    <!-- Portfolio card -->
                     <a href="#services" class="hl-card type-tall hl-bg-purple rv d1">
                         <div class="hl-card-glow g1"></div>
                         <div class="hl-card-glow g2"></div>
                         <div>
-                            <div class="hl-label">Работы</div>
-                            <div class="hl-big-title">ПОРТ-<br><span class="outline">ФОЛИО</span></div>
-                            <p class="hl-desc">Более 150 реализованных проектов в различных нишах</p>
+                            <div class="hl-label" data-i18n="hl.c1.lbl">Работы</div>
+                            <div class="hl-big-title" data-i18n="hl.c1.title">ПОРТ-<br><span
+                                    class="outline">ФОЛИО</span></div>
+                            <p class="hl-desc" data-i18n="hl.c1.desc">Более 150 реализованных проектов в различных нишах
+                            </p>
                             <div class="hl-stat-row">
                                 <div class="hl-stat"><span class="hl-stat-n">150<span
-                                            class="purple">+</span></span><span class="hl-stat-l">Проектов</span></div>
+                                            class="purple">+</span></span><span class="hl-stat-l"
+                                        data-i18n="hl.c1.s1">Проектов</span></div>
                                 <div class="hl-stat"><span class="hl-stat-n">12<span class="purple">+</span></span><span
-                                        class="hl-stat-l">Индустрий</span></div>
+                                        class="hl-stat-l" data-i18n="hl.c1.s2">Индустрий</span></div>
                             </div>
                         </div>
                         <div class="hl-arrow"><svg viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></div>
                     </a>
-                    <!-- Partners card -->
                     <a href="#contact" class="hl-card type-wide hl-bg-black rv d4">
                         <div class="hl-card-glow g3"></div>
                         <div>
-                            <div class="hl-label">Клиенты</div>
-                            <div class="hl-big-title" style="font-size:26px">ПАРТНЁРЫ</div>
+                            <div class="hl-label" data-i18n="hl.c4.lbl">Клиенты</div>
+                            <div class="hl-big-title" style="font-size:26px" data-i18n="hl.c4.title">ПАРТНЁРЫ</div>
                             <div class="hl-tags">
-                                <span class="hl-tag">E-commerce</span>
-                                <span class="hl-tag">B2B</span>
-                                <span class="hl-tag">HoReCa</span>
-                                <span class="hl-tag">Retail</span>
+                                <span class="hl-tag">E-commerce</span><span class="hl-tag">B2B</span><span
+                                    class="hl-tag">HoReCa</span><span class="hl-tag">Retail</span>
                             </div>
                         </div>
                         <div class="hl-arrow"><svg viewBox="0 0 24 24">
@@ -2625,41 +2633,35 @@
                             </svg></div>
                     </a>
                 </div>
-
-                <!-- CENTER COLUMN -->
                 <div class="hl-col-center">
-                    <!-- About Us – hero card -->
                     <a href="#about" class="hl-card type-hero hl-bg-deep rv d2">
                         <div class="hl-card-glow g1"></div>
                         <div>
-                            <div class="hl-label">Компания</div>
-                            <div class="hl-big-title" style="font-size:clamp(32px,3.5vw,50px)">О НАС —<br><span
-                                    class="outline">KHAN</span></div>
-                            <p class="hl-desc" style="max-width:320px">Современное маркетинговое агентство, которое
-                                строит цифровые системы роста для амбициозных брендов</p>
+                            <div class="hl-label" data-i18n="hl.c2.lbl">Компания</div>
+                            <div class="hl-big-title" style="font-size:clamp(32px,3.5vw,50px)" data-i18n="hl.c2.title">О
+                                НАС —<br><span class="outline">KHAN</span></div>
+                            <p class="hl-desc" style="max-width:320px" data-i18n="hl.c2.desc">Современное маркетинговое
+                                агентство, которое строит цифровые системы роста для амбициозных брендов</p>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:flex-end">
                             <div class="hl-orbit">
                                 <div class="hl-orbit-ring or1"></div>
                                 <div class="hl-orbit-ring or2"></div>
-                                <div class="hl-orbit-center">
-                                    <svg viewBox="0 0 24 24">
+                                <div class="hl-orbit-center"><svg viewBox="0 0 24 24">
                                         <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z"
                                             stroke="currentColor" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                             </div>
                             <div class="hl-arrow"><svg viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg></div>
                         </div>
                     </a>
-                    <!-- Process card -->
                     <a href="#process" class="hl-card type-wide hl-bg-glow rv d5">
                         <div class="hl-card-glow g2"></div>
                         <div>
-                            <div class="hl-label">Как работаем</div>
-                            <div class="hl-big-title">ПРО-<br>ЦЕСС</div>
+                            <div class="hl-label" data-i18n="hl.c5.lbl">Как работаем</div>
+                            <div class="hl-big-title" data-i18n="hl.c5.title">ПРО-<br>ЦЕСС</div>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:center">
                             <div style="display:flex;gap:8px">
@@ -2682,42 +2684,37 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- RIGHT COLUMN -->
                 <div class="hl-col-right">
-                    <!-- Services card -->
                     <a href="#services" class="hl-card type-wide hl-bg-rich rv d3">
                         <div class="hl-card-glow g1"></div>
                         <div>
-                            <div class="hl-label">Направления</div>
-                            <div class="hl-big-title" style="font-size:26px">УСЛУГИ</div>
+                            <div class="hl-label" data-i18n="hl.c3.lbl">Направления</div>
+                            <div class="hl-big-title" style="font-size:26px" data-i18n="hl.c3.title">УСЛУГИ</div>
                             <div class="hl-tags">
-                                <span class="hl-tag">Брендинг</span>
-                                <span class="hl-tag">SMM</span>
-                                <span class="hl-tag">SEO</span>
-                                <span class="hl-tag">Реклама</span>
+                                <span class="hl-tag" data-i18n="hl.tag1">Брендинг</span><span
+                                    class="hl-tag">SMM</span><span class="hl-tag">SEO</span><span class="hl-tag"
+                                    data-i18n="hl.tag2">Реклама</span>
                             </div>
                         </div>
                         <div class="hl-arrow"><svg viewBox="0 0 24 24">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg></div>
                     </a>
-                    <!-- Contact card – tall -->
                     <a href="#contact" class="hl-card type-tall hl-bg-black rv d6"
                         style="background:conic-gradient(from 180deg at 50% 50%,#0d0520 0%,#1a0850 35%,#0a0320 70%,#0d0520 100%)">
                         <div class="hl-card-glow g1"></div>
                         <div class="hl-card-glow g2"></div>
                         <div>
-                            <div class="hl-label">Связаться</div>
-                            <div class="hl-big-title">КОН-<br><span class="outline">ТАКТ</span></div>
-                            <p class="hl-desc">Напишите нам — ответим в течение часа и обсудим ваш проект</p>
+                            <div class="hl-label" data-i18n="hl.c6.lbl">Связаться</div>
+                            <div class="hl-big-title" data-i18n="hl.c6.title">КОН-<br><span class="outline">ТАКТ</span>
+                            </div>
+                            <p class="hl-desc" data-i18n="hl.c6.desc">Напишите нам — ответим в течение часа и обсудим
+                                ваш проект</p>
                         </div>
                         <div style="display:flex;justify-content:space-between;align-items:flex-end">
-                            <div class="hl-icon-wrap">
-                                <svg viewBox="0 0 24 24">
+                            <div class="hl-icon-wrap"><svg viewBox="0 0 24 24">
                                     <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                                </svg>
-                            </div>
+                                </svg></div>
                             <div class="hl-arrow"><svg viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg></div>
@@ -2728,73 +2725,68 @@
         </div>
     </section>
 
-    <!-- ═══ PROCESS ═══ -->
+    <!-- PROCESS -->
     <section id="process" class="sec-pad">
         <div class="sec-max">
             <div class="rv">
-                <div class="s-tag">Как мы работаем</div>
-                <h2 class="s-title">Наш процесс — <span class="dim">прозрачный и чёткий</span></h2>
+                <div class="s-tag" data-i18n="proc.tag">Как мы работаем</div>
+                <h2 class="s-title"><span data-i18n="proc.title">Наш процесс —</span> <span class="dim"
+                        data-i18n="proc.title2">прозрачный и чёткий</span></h2>
             </div>
             <div class="proc-grid rv d2">
                 <div class="proc-step">
                     <div class="proc-n">01</div>
-                    <div class="proc-ic">
-                        <svg viewBox="0 0 24 24">
+                    <div class="proc-ic"><svg viewBox="0 0 24 24">
                             <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-                        </svg>
-                    </div>
-                    <div class="proc-ttl">Брифинг и аудит</div>
-                    <p class="proc-txt">Проводим глубокий анализ вашего бизнеса, конкурентов и целевой аудитории.
-                        Изучаем текущие каналы и точки роста.</p>
+                        </svg></div>
+                    <div class="proc-ttl" data-i18n="proc.s1.t">Брифинг и аудит</div>
+                    <p class="proc-txt" data-i18n="proc.s1.p">Проводим глубокий анализ вашего бизнеса, конкурентов и
+                        целевой аудитории. Изучаем текущие каналы и точки роста.</p>
                 </div>
                 <div class="proc-step">
                     <div class="proc-n">02</div>
-                    <div class="proc-ic">
-                        <svg viewBox="0 0 24 24">
+                    <div class="proc-ic"><svg viewBox="0 0 24 24">
                             <path d="M9 11l3 3L22 4" />
                             <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-                        </svg>
-                    </div>
-                    <div class="proc-ttl">Стратегия</div>
-                    <p class="proc-txt">Разрабатываем детальный маркетинговый план с чёткими KPI, бюджетным
-                        распределением и дорожной картой по каждому каналу.</p>
+                        </svg></div>
+                    <div class="proc-ttl" data-i18n="proc.s2.t">Стратегия</div>
+                    <p class="proc-txt" data-i18n="proc.s2.p">Разрабатываем детальный маркетинговый план с чёткими KPI,
+                        бюджетным распределением и дорожной картой по каждому каналу.</p>
                 </div>
                 <div class="proc-step">
                     <div class="proc-n">03</div>
-                    <div class="proc-ic">
-                        <svg viewBox="0 0 24 24">
+                    <div class="proc-ic"><svg viewBox="0 0 24 24">
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                        </svg>
-                    </div>
-                    <div class="proc-ttl">Запуск</div>
-                    <p class="proc-txt">Создаём все материалы, настраиваем кампании и запускаем продвижение в течение 7
-                        рабочих дней после согласования стратегии.</p>
+                        </svg></div>
+                    <div class="proc-ttl" data-i18n="proc.s3.t">Запуск</div>
+                    <p class="proc-txt" data-i18n="proc.s3.p">Создаём все материалы, настраиваем кампании и запускаем
+                        продвижение в течение 7 рабочих дней после согласования стратегии.</p>
                 </div>
                 <div class="proc-step">
                     <div class="proc-n">04</div>
-                    <div class="proc-ic">
-                        <svg viewBox="0 0 24 24">
+                    <div class="proc-ic"><svg viewBox="0 0 24 24">
                             <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
                             <polyline points="17 6 23 6 23 12" />
-                        </svg>
-                    </div>
-                    <div class="proc-ttl">Рост и оптимизация</div>
-                    <p class="proc-txt">Непрерывно анализируем данные, тестируем гипотезы и масштабируем то, что
-                        работает лучше всего для вашего бизнеса.</p>
+                        </svg></div>
+                    <div class="proc-ttl" data-i18n="proc.s4.t">Рост и оптимизация</div>
+                    <p class="proc-txt" data-i18n="proc.s4.p">Непрерывно анализируем данные, тестируем гипотезы и
+                        масштабируем то, что работает лучше всего для вашего бизнеса.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══ CONTACT ═══ -->
+    <!-- CONTACT -->
     <section id="contact" class="sec-pad">
         <div class="sec-max">
             <div class="cont-in">
                 <div class="cont-left">
-                    <div class="s-tag rv">Обсудить проект</div>
-                    <h2 class="s-title rv d1">Давайте построим<br><span class="dim">что-то великое</span></h2>
-                    <p class="s-desc rv d2" style="margin-bottom:44px">Готовы вывести ваш бренд на новый уровень?
-                        Напишите нам — и мы вернёмся в течение одного часа с первичным планом действий.</p>
+                    <div class="s-tag rv" data-i18n="cont.tag">Обсудить проект</div>
+                    <h2 class="s-title rv d1"><span data-i18n="cont.title">Давайте построим</span><br><span class="dim"
+                            data-i18n="cont.title2">что-то великое</span></h2>
+                    <p class="s-desc rv d2" style="margin-bottom:44px" data-i18n="cont.desc">Готовы вывести ваш бренд на
+                        новый уровень? Напишите нам — и мы вернёмся в течение одного часа с первичным планом действий.
+                    </p>
                     <div class="rv d3">
                         <div class="ci-item">
                             <div class="ci-ic"><svg viewBox="0 0 24 24">
@@ -2804,7 +2796,7 @@
                                 </svg></div>
                             <div>
                                 <div class="ci-lbl">Email</div>
-                                <div class="ci-val">hello@khan.marketing</div>
+                                <div class="ci-val">khanmarketing@gmail.com</div>
                             </div>
                         </div>
                         <div class="ci-item">
@@ -2813,8 +2805,8 @@
                                         d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
                                 </svg></div>
                             <div>
-                                <div class="ci-lbl">Телефон</div>
-                                <div class="ci-val">+998 90 000 00 00</div>
+                                <div class="ci-lbl" data-i18n="cont.phone">Телефон</div>
+                                <div class="ci-val">+998 91 555 01 55</div>
                             </div>
                         </div>
                         <div class="ci-item">
@@ -2823,55 +2815,48 @@
                                     <circle cx="12" cy="10" r="3" />
                                 </svg></div>
                             <div>
-                                <div class="ci-lbl">Адрес</div>
-                                <div class="ci-val">Бухара, Узбекистан</div>
+                                <div class="ci-lbl" data-i18n="cont.addr">Адрес</div>
+                                <div class="ci-val" data-i18n="cont.addr.val">Бухара, Узбекистан</div>
                             </div>
                         </div>
                     </div>
                     <div class="socials rv d4">
-                        <a href="#" class="soc" title="Instagram">
-                            <svg viewBox="0 0 24 24">
+                        <a href="#" class="soc" title="Instagram"><svg viewBox="0 0 24 24">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                            </svg>
-                        </a>
-                        <a href="#" class="soc" title="Telegram">
-                            <svg viewBox="0 0 24 24">
+                            </svg></a>
+                        <a href="#" class="soc" title="Telegram"><svg viewBox="0 0 24 24">
                                 <path d="M22 2L11 13" />
                                 <path d="M22 2L15 22l-4-9-9-4 20-7z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="soc" title="LinkedIn">
-                            <svg viewBox="0 0 24 24">
+                            </svg></a>
+                        <a href="#" class="soc" title="LinkedIn"><svg viewBox="0 0 24 24">
                                 <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
                                 <rect x="2" y="9" width="4" height="12" />
                                 <circle cx="4" cy="4" r="2" />
-                            </svg>
-                        </a>
-                        <a href="#" class="soc" title="YouTube">
-                            <svg viewBox="0 0 24 24">
+                            </svg></a>
+                        <a href="#" class="soc" title="YouTube"><svg viewBox="0 0 24 24">
                                 <path
                                     d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
                                 <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
-                            </svg>
-                        </a>
+                            </svg></a>
                     </div>
                 </div>
                 <div class="cf rv d2">
                     <form id="cform" onsubmit="sendForm(event)">
                         <div class="fr">
-                            <div class="ff"><label>Ваше имя</label><input type="text" id="fn"
-                                    placeholder="Имя Фамилия" required></div>
+                            <div class="ff"><label data-i18n="form.name">Ваше имя</label><input type="text" id="fn"
+                                    data-i18n-ph="form.name.ph" placeholder="Имя Фамилия" required></div>
                             <div class="ff"><label>Email</label><input type="email" id="fe"
                                     placeholder="example@gmail.com" required></div>
                         </div>
-                        <div class="ff"><label>Телефон</label><input type="tel" id="fp" placeholder="+998 90 000 00 00">
-                        </div>
-                        <div class="ff"><label>Сообщение</label><textarea id="fm"
-                                placeholder="Расскажите о вашем проекте..." required></textarea></div>
+                        <div class="ff"><label data-i18n="form.phone">Телефон</label><input type="tel" id="fp"
+                                placeholder="+998 90 000 00 00"></div>
+                        <div class="ff"><label data-i18n="form.msg">Сообщение</label><textarea id="fm"
+                                data-i18n-ph="form.msg.ph" placeholder="Расскажите о вашем проекте..."
+                                required></textarea></div>
                         <button type="submit" class="bs" id="sbtn">
-                            <span id="stxt">Отправить заявку →</span>
+                            <span id="stxt" data-i18n="form.submit">Отправить заявку →</span>
                             <div class="lring" id="lr"></div>
                         </button>
                     </form>
@@ -2888,24 +2873,186 @@
                 <path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z" />
             </svg>
         </a>
-        <div class="fc">© 2025 Khan Marketing Company<br>Все права защищены</div>
+        <div class="fc" data-i18n="footer.copy">© 2025 Khan Marketing Company<br>Все права защищены</div>
         <div class="flinks">
-            <a href="#services">Услуги</a>
-            <a href="#about">О нас</a>
-            <a href="#adv">Преимущества</a>
-            <a href="#contact">Контакты</a>
+            <a href="#services" data-i18n="nav.services">Услуги</a>
+            <a href="#about" data-i18n="nav.about">О нас</a>
+            <a href="#adv" data-i18n="nav.adv">Преимущества</a>
+            <a href="#contact" data-i18n="nav.contact">Контакты</a>
         </div>
     </footer>
 
     <div id="toast"></div>
 
     <script>
+        // ══════════════════════════════════════════
+        // TRANSLATIONS
+        // ══════════════════════════════════════════
+        const LANGS = {
+            ru: {
+                'nav.services': 'Услуги', 'nav.about': 'О нас', 'nav.adv': 'Преимущества', 'nav.hl': 'Разделы', 'nav.process': 'Процесс', 'nav.contact': 'Контакты', 'nav.cta': 'Начать работу',
+                'hero.badge': 'Премиум маркетинговое агентство', 'hero.sub': 'Мы строим мощные цифровые системы, бренды и маркетинговые механизмы для амбициозных компаний. Стратегия, технологии, результат.', 'hero.btn1': 'Начать проект', 'hero.btn2': 'Наши услуги', 'hero.m1': 'Проектов', 'hero.m2': 'Довольных клиентов', 'hero.m3': 'Лет на рынке',
+                'mq.1': 'Брендинг', 'mq.2': 'SMM-маркетинг', 'mq.3': 'Веб-дизайн', 'mq.4': 'Перформанс-реклама', 'mq.5': 'Контент-продакшн', 'mq.6': 'SEO-продвижение', 'mq.7': 'Стратегия', 'mq.8': 'Аналитика',
+                'srv.tag': 'Что мы делаем', 'srv.title': 'Услуги, которые', 'srv.title2': 'дают результат', 'srv.cta': 'Обсудить проект →',
+                'srv.s1.name': 'Брендинг', 'srv.s1.txt': 'Создаём уникальные фирменные стили и визуальные идентичности, которые запоминаются и выделяют вас среди конкурентов.',
+                'srv.s2.name': 'SMM-маркетинг', 'srv.s2.txt': 'Стратегическое ведение социальных сетей: контент, таргетинг, вовлечённость и рост подписчиков для вашего бизнеса.',
+                'srv.s3.name': 'Веб-дизайн', 'srv.s3.txt': 'Сайты и лендинги премиум-уровня с детальной проработкой UX/UI, высокой конверсией и безупречной производительностью.',
+                'srv.s4.name': 'Комплекс-маркетинг', 'srv.s4.txt': 'Полный набор маркетинговых действий, которые помогают бизнесу привлекать клиентов, продавать и развивать бренд системно.',
+                'srv.s5.name': 'Контент-продакшн', 'srv.s5.txt': 'Фото, видео, текст, графика — всё это мы создаём под ключ. Контент, который вовлекает и продаёт на каждом этапе воронки.',
+                'srv.s6.name': 'SEO-оптимизация', 'srv.s6.txt': 'Технический аудит, семантика, линкбилдинг и контент-стратегия для устойчивого органического роста в поисковых системах.',
+                'about.tag': 'Кто мы', 'about.title': 'О компании', 'about.txt': 'Khan — это современная маркетинговая компания, специализирующаяся на построении премиального цифрового присутствия для амбициозных брендов. Мы объединяем глубокую стратегию, передовые технологии и высокую креативность, чтобы помогать бизнесу расти быстрее.',
+                'about.f1.t': 'Прозрачная отчётность', 'about.f1.s': 'Ежемесячные отчёты по всем KPI и каналам', 'about.f2.t': 'Ориентация на результат', 'about.f2.s': 'Каждое решение измеримо и подкреплено данными', 'about.f3.t': 'Команда экспертов', 'about.f3.s': 'Специалисты с опытом в 10+ нишах', 'about.f4.t': 'Быстрый запуск', 'about.f4.s': 'Первые результаты уже через 2 недели работы',
+                'about.st1': 'Завершённых проектов', 'about.st2': 'Довольных клиентов', 'about.st3': 'Лет на рынке',
+                'adv.tag': 'Почему Khan', 'adv.title': 'Наши', 'adv.title2': 'преимущества', 'adv.desc': 'Мы не просто подрядчик — мы стратегический партнёр, который глубоко погружается в ваш бизнес и создаёт маркетинговые системы, которые работают без вашего постоянного контроля.',
+                'adv.i1.t': 'Надёжность и прозрачность', 'adv.i1.p': 'Вы всегда знаете, что происходит с вашим бюджетом. Никаких скрытых платежей и размытых отчётов — только чёткие цифры и реальные результаты.',
+                'adv.i2.t': 'Измеримые KPI', 'adv.i2.p': 'Каждая кампания запускается с чёткими целями и ключевыми метриками. Мы фокусируемся на тех показателях, которые реально влияют на ваш доход.',
+                'adv.i3.t': 'Индивидуальный подход', 'adv.i3.p': 'Нет шаблонных решений. Мы изучаем ваш бизнес, рынок и аудиторию, чтобы создать стратегию, которая работает именно для вас.',
+                'adv.i4.t': 'Скорость запуска', 'adv.i4.p': 'От первой встречи до старта рекламных кампаний — не более 7 рабочих дней. Быстрый онбординг без лишней бюрократии.',
+                'adv.i5.t': 'Экспертиза в 10+ нишах', 'adv.i5.p': 'E-commerce, B2B, недвижимость, HoReCa, медицина, образование — у нас есть реальный опыт и кейсы в вашей индустрии.',
+                'adv.i6.t': 'Выделенный менеджер', 'adv.i6.p': 'Один контакт — полная ответственность. Ваш менеджер на связи 5 дней в неделю и координирует всю команду внутри Khan.',
+                'adv.i7.t': 'Гарантия качества', 'adv.i7.p': 'Если результаты не соответствуют согласованным KPI в первый месяц, мы продолжаем работу за свой счёт до их достижения.',
+                'hl.tag': 'Навигация', 'hl.title': 'Разделы сайта',
+                'hl.c1.lbl': 'Работы', 'hl.c1.title': 'ПОРТ-<br><span class="outline">ФОЛИО</span>', 'hl.c1.desc': 'Более 150 реализованных проектов в различных нишах', 'hl.c1.s1': 'Проектов', 'hl.c1.s2': 'Индустрий',
+                'hl.c2.lbl': 'Компания', 'hl.c2.title': 'О НАС —<br><span class="outline">KHAN</span>', 'hl.c2.desc': 'Современное маркетинговое агентство, которое строит цифровые системы роста для амбициозных брендов',
+                'hl.c3.lbl': 'Направления', 'hl.c3.title': 'УСЛУГИ', 'hl.tag1': 'Брендинг', 'hl.tag2': 'Реклама',
+                'hl.c4.lbl': 'Клиенты', 'hl.c4.title': 'ПАРТНЁРЫ',
+                'hl.c5.lbl': 'Как работаем', 'hl.c5.title': 'ПРО-<br>ЦЕСС',
+                'hl.c6.lbl': 'Связаться', 'hl.c6.title': 'КОН-<br><span class="outline">ТАКТ</span>', 'hl.c6.desc': 'Напишите нам — ответим в течение часа и обсудим ваш проект',
+                'proc.tag': 'Как мы работаем', 'proc.title': 'Наш процесс —', 'proc.title2': 'прозрачный и чёткий',
+                'proc.s1.t': 'Брифинг и аудит', 'proc.s1.p': 'Проводим глубокий анализ вашего бизнеса, конкурентов и целевой аудитории. Изучаем текущие каналы и точки роста.',
+                'proc.s2.t': 'Стратегия', 'proc.s2.p': 'Разрабатываем детальный маркетинговый план с чёткими KPI, бюджетным распределением и дорожной картой по каждому каналу.',
+                'proc.s3.t': 'Запуск', 'proc.s3.p': 'Создаём все материалы, настраиваем кампании и запускаем продвижение в течение 7 рабочих дней после согласования стратегии.',
+                'proc.s4.t': 'Рост и оптимизация', 'proc.s4.p': 'Непрерывно анализируем данные, тестируем гипотезы и масштабируем то, что работает лучше всего для вашего бизнеса.',
+                'cont.tag': 'Обсудить проект', 'cont.title': 'Давайте построим', 'cont.title2': 'что-то великое', 'cont.desc': 'Готовы вывести ваш бренд на новый уровень? Напишите нам — и мы вернёмся в течение одного часа с первичным планом действий.',
+                'cont.phone': 'Телефон', 'cont.addr': 'Адрес', 'cont.addr.val': 'Бухара, Узбекистан',
+                'form.name': 'Ваше имя', 'form.name.ph': 'Имя Фамилия', 'form.phone': 'Телефон', 'form.msg': 'Сообщение', 'form.msg.ph': 'Расскажите о вашем проекте...', 'form.submit': 'Отправить заявку →',
+                'footer.copy': '© 2025 Khan Marketing Company<br>Все права защищены',
+                'toast.ok': 'Заявка успешно отправлена!', 'toast.err': 'Ошибка. Попробуйте ещё раз.'
+            },
+            en: {
+                'nav.services': 'Services', 'nav.about': 'About', 'nav.adv': 'Advantages', 'nav.hl': 'Sections', 'nav.process': 'Process', 'nav.contact': 'Contact', 'nav.cta': 'Get Started',
+                'hero.badge': 'Premium Marketing Agency', 'hero.sub': 'We build powerful digital systems, brands and marketing engines for ambitious companies. Strategy, technology, results.', 'hero.btn1': 'Start a Project', 'hero.btn2': 'Our Services', 'hero.m1': 'Projects', 'hero.m2': 'Happy Clients', 'hero.m3': 'Years on Market',
+                'mq.1': 'Branding', 'mq.2': 'SMM Marketing', 'mq.3': 'Web Design', 'mq.4': 'Performance Ads', 'mq.5': 'Content Production', 'mq.6': 'SEO Promotion', 'mq.7': 'Strategy', 'mq.8': 'Analytics',
+                'srv.tag': 'What we do', 'srv.title': 'Services that', 'srv.title2': 'deliver results', 'srv.cta': 'Discuss a Project →',
+                'srv.s1.name': 'Branding', 'srv.s1.txt': 'We create unique brand identities and visual styles that stick in memory and set you apart from the competition.',
+                'srv.s2.name': 'SMM Marketing', 'srv.s2.txt': 'Strategic social media management: content, targeting, engagement and subscriber growth for your business.',
+                'srv.s3.name': 'Web Design', 'srv.s3.txt': 'Premium-level websites and landing pages with meticulous UX/UI, high conversion rates and flawless performance.',
+                'srv.s4.name': 'Integrated Marketing', 'srv.s4.txt': 'A full suite of marketing actions that help businesses attract customers, sell more and grow their brand systematically.',
+                'srv.s5.name': 'Content Production', 'srv.s5.txt': 'Photos, videos, copy, graphics — we produce it all turnkey. Content that engages and sells at every stage of the funnel.',
+                'srv.s6.name': 'SEO Optimization', 'srv.s6.txt': 'Technical audits, semantics, link-building and content strategy for sustainable organic growth in search engines.',
+                'about.tag': 'Who we are', 'about.title': 'About the Company', 'about.txt': 'Khan is a modern marketing company specialising in building premium digital presence for ambitious brands. We combine deep strategy, advanced technology and high creativity to help businesses grow faster.',
+                'about.f1.t': 'Transparent Reporting', 'about.f1.s': 'Monthly reports on all KPIs and channels', 'about.f2.t': 'Results-Oriented', 'about.f2.s': 'Every decision is measurable and data-backed', 'about.f3.t': 'Expert Team', 'about.f3.s': 'Specialists with experience in 10+ niches', 'about.f4.t': 'Fast Launch', 'about.f4.s': 'First results within 2 weeks of starting',
+                'about.st1': 'Completed Projects', 'about.st2': 'Happy Clients', 'about.st3': 'Years on Market',
+                'adv.tag': 'Why Khan', 'adv.title': 'Our', 'adv.title2': 'Advantages', 'adv.desc': 'We are not just a contractor — we are a strategic partner who immerses deeply in your business and builds marketing systems that work without your constant oversight.',
+                'adv.i1.t': 'Reliability & Transparency', 'adv.i1.p': 'You always know what is happening with your budget. No hidden fees or vague reports — only clear numbers and real results.',
+                'adv.i2.t': 'Measurable KPIs', 'adv.i2.p': 'Every campaign is launched with clear goals and key metrics. We focus on the indicators that truly impact your revenue.',
+                'adv.i3.t': 'Individual Approach', 'adv.i3.p': 'No cookie-cutter solutions. We study your business, market and audience to craft a strategy that works specifically for you.',
+                'adv.i4.t': 'Speed of Launch', 'adv.i4.p': 'From first meeting to campaign go-live — no more than 7 business days. Fast onboarding with zero red tape.',
+                'adv.i5.t': 'Expertise in 10+ Niches', 'adv.i5.p': 'E-commerce, B2B, real estate, HoReCa, medicine, education — we have real experience and case studies in your industry.',
+                'adv.i6.t': 'Dedicated Manager', 'adv.i6.p': 'One contact, full responsibility. Your manager is available 5 days a week and coordinates the entire Khan team.',
+                'adv.i7.t': 'Quality Guarantee', 'adv.i7.p': 'If results don\'t match agreed KPIs in the first month, we continue working at our own expense until they are achieved.',
+                'hl.tag': 'Navigation', 'hl.title': 'Site Sections',
+                'hl.c1.lbl': 'Works', 'hl.c1.title': 'PORT-<br><span class="outline">FOLIO</span>', 'hl.c1.desc': 'Over 150 completed projects across various niches', 'hl.c1.s1': 'Projects', 'hl.c1.s2': 'Industries',
+                'hl.c2.lbl': 'Company', 'hl.c2.title': 'ABOUT —<br><span class="outline">KHAN</span>', 'hl.c2.desc': 'A modern marketing agency building digital growth systems for ambitious brands',
+                'hl.c3.lbl': 'Directions', 'hl.c3.title': 'SERVICES', 'hl.tag1': 'Branding', 'hl.tag2': 'Advertising',
+                'hl.c4.lbl': 'Clients', 'hl.c4.title': 'PARTNERS',
+                'hl.c5.lbl': 'How we work', 'hl.c5.title': 'PRO-<br>CESS',
+                'hl.c6.lbl': 'Reach out', 'hl.c6.title': 'CON-<br><span class="outline">TACT</span>', 'hl.c6.desc': 'Write to us — we\'ll reply within an hour and discuss your project',
+                'proc.tag': 'How we work', 'proc.title': 'Our process —', 'proc.title2': 'transparent and clear',
+                'proc.s1.t': 'Brief & Audit', 'proc.s1.p': 'We conduct a deep analysis of your business, competitors and target audience. We study current channels and growth points.',
+                'proc.s2.t': 'Strategy', 'proc.s2.p': 'We develop a detailed marketing plan with clear KPIs, budget allocation and a roadmap for each channel.',
+                'proc.s3.t': 'Launch', 'proc.s3.p': 'We create all materials, set up campaigns and launch promotion within 7 business days of strategy sign-off.',
+                'proc.s4.t': 'Growth & Optimisation', 'proc.s4.p': 'We continuously analyse data, test hypotheses and scale what works best for your business.',
+                'cont.tag': 'Discuss a Project', 'cont.title': 'Let\'s Build', 'cont.title2': 'Something Great', 'cont.desc': 'Ready to take your brand to the next level? Write to us — we\'ll get back within one hour with an initial action plan.',
+                'cont.phone': 'Phone', 'cont.addr': 'Address', 'cont.addr.val': 'Bukhara, Uzbekistan',
+                'form.name': 'Your Name', 'form.name.ph': 'First Last Name', 'form.phone': 'Phone', 'form.msg': 'Message', 'form.msg.ph': 'Tell us about your project...', 'form.submit': 'Send Request →',
+                'footer.copy': '© 2025 Khan Marketing Company<br>All rights reserved',
+                'toast.ok': 'Request sent successfully!', 'toast.err': 'Error. Please try again.'
+            },
+            uz: {
+                'nav.services': 'Xizmatlar', 'nav.about': 'Biz haqimizda', 'nav.adv': 'Afzalliklar', 'nav.hl': 'Bo\'limlar', 'nav.process': 'Jarayon', 'nav.contact': 'Aloqa', 'nav.cta': 'Boshlash',
+                'hero.badge': 'Premium marketing agentligi', 'hero.sub': 'Biz maqsadli kompaniyalar uchun kuchli raqamli tizimlar, brendlar va marketing mexanizmlari yaratamiz. Strategiya, texnologiya, natija.', 'hero.btn1': 'Loyiha boshlash', 'hero.btn2': 'Xizmatlarimiz', 'hero.m1': 'Loyihalar', 'hero.m2': 'Mamnun mijozlar', 'hero.m3': 'Yil tajriba',
+                'mq.1': 'Brending', 'mq.2': 'SMM-marketing', 'mq.3': 'Veb-dizayn', 'mq.4': 'Performance reklama', 'mq.5': 'Kontent ishlab chiqarish', 'mq.6': 'SEO-ilgari surish', 'mq.7': 'Strategiya', 'mq.8': 'Tahlil',
+                'srv.tag': 'Nima qilamiz', 'srv.title': 'Natija beradigan', 'srv.title2': 'xizmatlar', 'srv.cta': 'Loyihani muhokama qilish →',
+                'srv.s1.name': 'Brending', 'srv.s1.txt': 'Raqobatchilar orasida ajralib turadigan va esda qoladigan noyob korporativ uslub hamda vizual identifikatsiya yaratamiz.',
+                'srv.s2.name': 'SMM-marketing', 'srv.s2.txt': 'Strategik ijtimoiy tarmoqlar boshqaruvi: kontent, targeting, jalb qilish va biznesingiz uchun obunachilar o\'sishi.',
+                'srv.s3.name': 'Veb-dizayn', 'srv.s3.txt': 'Yuqori konversiya va mukammal ishlash bilan UX/UI ni puxta ishlab chiqqan premium saytlar va lendinglar.',
+                'srv.s4.name': 'Kompleks marketing', 'srv.s4.txt': 'Biznesga mijozlarni jalb qilish, sotish va brendni tizimli ravishda rivojlantirishga yordam beradigan to\'liq marketing harakatlari to\'plami.',
+                'srv.s5.name': 'Kontent ishlab chiqarish', 'srv.s5.txt': 'Foto, video, matn, grafika — barchasini kalit ostida yaratamiz. Funnel har bir bosqichida jalb qiladigan va sotadigan kontent.',
+                'srv.s6.name': 'SEO-optimallashtirish', 'srv.s6.txt': 'Qidiruv tizimlarida barqaror organik o\'sish uchun texnik audit, semantika, link-biding va kontent strategiyasi.',
+                'about.tag': 'Biz kimiz', 'about.title': 'Kompaniya haqida', 'about.txt': 'Khan — bu maqsadli brendlar uchun premium raqamli mavjudlik qurishga ixtisoslashgan zamonaviy marketing kompaniyasi. Biz biznesga tezroq o\'sishga yordam berish uchun chuqur strategiya, ilg\'or texnologiyalar va yuqori ijodkorlikni birlashtiramiz.',
+                'about.f1.t': 'Shaffof hisobot', 'about.f1.s': 'Barcha KPI va kanallar bo\'yicha oylik hisobotlar', 'about.f2.t': 'Natijaga yo\'nalganlik', 'about.f2.s': 'Har bir qaror o\'lchanadigan va ma\'lumotlarga asoslangan', 'about.f3.t': 'Ekspertlar jamoasi', 'about.f3.s': '10+ sohadagi tajribali mutaxassislar', 'about.f4.t': 'Tez ishga tushirish', 'about.f4.s': 'Ishni boshlashdan 2 hafta ichida birinchi natijalar',
+                'about.st1': 'Tugallangan loyihalar', 'about.st2': 'Mamnun mijozlar', 'about.st3': 'Yil tajriba',
+                'adv.tag': 'Nima uchun Khan', 'adv.title': 'Bizning', 'adv.title2': 'afzalliklarimiz', 'adv.desc': 'Biz shunchaki pudratchi emas — biz biznesingizga chuqur sho\'ng\'iydigan va doimiy nazoratisiz ishlaydigan marketing tizimlari yaratadigan strategik hamkormiz.',
+                'adv.i1.t': 'Ishonchlilik va shaffoflik', 'adv.i1.p': 'Siz byudjetingiz bilan nima sodir bo\'layotganini har doim bilasiz. Hech qanday yashirin to\'lovlar va noaniq hisobotlar yo\'q — faqat aniq raqamlar va real natijalar.',
+                'adv.i2.t': 'O\'lchanadigan KPI', 'adv.i2.p': 'Har bir kampaniya aniq maqsadlar va asosiy ko\'rsatkichlar bilan ishga tushiriladi. Biz daromadingizga haqiqatan ta\'sir qiladigan ko\'rsatkichlarga e\'tibor qaratamiz.',
+                'adv.i3.t': 'Individual yondashuv', 'adv.i3.p': 'Shablon yechimlar yo\'q. Biz aynan siz uchun ishlaydigan strategiya yaratish uchun biznesingizni, bozorni va auditoriyani o\'rganamiz.',
+                'adv.i4.t': 'Ishga tushirish tezligi', 'adv.i4.p': 'Birinchi uchrashuvdan reklama kampaniyalari boshlanishiga qadar — 7 ish kunidan ko\'p emas. Ortiqcha byurokratiyasiz tez onboarding.',
+                'adv.i5.t': '10+ sohadagi tajriba', 'adv.i5.p': 'E-commerce, B2B, ko\'chmas mulk, HoReCa, tibbiyot, ta\'lim — sizning sohangizdagi real tajriba va keyslarimiz bor.',
+                'adv.i6.t': 'Ajratilgan menejer', 'adv.i6.p': 'Bitta aloqa — to\'liq mas\'uliyat. Sizning menejeringiz haftaning 5 kuni aloqada va Khan ichidagi butun jamoani muvofiqlashtirsadi.',
+                'adv.i7.t': 'Sifat kafolati', 'adv.i7.p': 'Agar natijalar birinchi oyda kelishilgan KPIlarga mos kelmasa, biz ularni erishguncha o\'z hisobimizdan ishlashda davom etamiz.',
+                'hl.tag': 'Navigatsiya', 'hl.title': 'Sayt bo\'limlari',
+                'hl.c1.lbl': 'Ishlar', 'hl.c1.title': 'PORT-<br><span class="outline">FOLIO</span>', 'hl.c1.desc': 'Turli sohalarda 150 dan ortiq amalga oshirilgan loyihalar', 'hl.c1.s1': 'Loyihalar', 'hl.c1.s2': 'Sohalar',
+                'hl.c2.lbl': 'Kompaniya', 'hl.c2.title': 'BIZ —<br><span class="outline">HAQIMIZDA</span>', 'hl.c2.desc': 'Maqsadli brendlar uchun raqamli o\'sish tizimlarini quradigan zamonaviy marketing agentligi',
+                'hl.c3.lbl': 'Yo\'nalishlar', 'hl.c3.title': 'XIZMATLAR', 'hl.tag1': 'Brending', 'hl.tag2': 'Reklama',
+                'hl.c4.lbl': 'Mijozlar', 'hl.c4.title': 'HAMKORLAR',
+                'hl.c5.lbl': 'Qanday ishlaymiz', 'hl.c5.title': 'JAR-<br>AYON',
+                'hl.c6.lbl': 'Bog\'lanish', 'hl.c6.title': 'ALA-<br><span class="outline">QA</span>', 'hl.c6.desc': 'Bizga yozing — bir soat ichida javob beramiz va loyihangizni muhokama qilamiz',
+                'proc.tag': 'Qanday ishlaymiz', 'proc.title': 'Bizning jarayon —', 'proc.title2': 'shaffof va aniq',
+                'proc.s1.t': 'Brifing va audit', 'proc.s1.p': 'Biznesingiz, raqobatchilar va maqsadli auditoriyani chuqur tahlil qilamiz. Joriy kanallar va o\'sish nuqtalarini o\'rganamiz.',
+                'proc.s2.t': 'Strategiya', 'proc.s2.p': 'Har bir kanal bo\'yicha aniq KPI, byudjet taqsimoti va yo\'l xaritasi bilan batafsil marketing rejasini ishlab chiqamiz.',
+                'proc.s3.t': 'Ishga tushirish', 'proc.s3.p': 'Barcha materiallarni yaratamiz, kampaniyalarni sozlaymiz va strategiya tasdiqlangandan so\'ng 7 ish kuni ichida reklamani boshlaymiz.',
+                'proc.s4.t': 'O\'sish va optimallashtirish', 'proc.s4.p': 'Ma\'lumotlarni uzluksiz tahlil qilamiz, gipotezalarni sinab ko\'ramiz va biznesingiz uchun eng yaxshi ishlaydigan narsani kengaytiramiz.',
+                'cont.tag': 'Loyihani muhokama qilish', 'cont.title': 'Keling birga', 'cont.title2': 'katta narsa qurайлик', 'cont.desc': 'Brendingizni yangi darajaga olib chiqishga tayyormisiz? Bizga yozing — bir soat ichida dastlabki harakat rejasi bilan qaytamiz.',
+                'cont.phone': 'Telefon', 'cont.addr': 'Manzil', 'cont.addr.val': 'Buxoro, O\'zbekiston',
+                'form.name': 'Ismingiz', 'form.name.ph': 'Ism Familiya', 'form.phone': 'Telefon', 'form.msg': 'Xabar', 'form.msg.ph': 'Loyihangiz haqida gapirib bering...', 'form.submit': 'Ariza yuborish →',
+                'footer.copy': '© 2025 Khan Marketing Company<br>Barcha huquqlar himoyalangan',
+                'toast.ok': 'Ariza muvaffaqiyatli yuborildi!', 'toast.err': 'Xato. Qayta urinib ko\'ring.'
+            }
+        };
+
+        let currentLang = 'ru';
+
+        function setLang(lang) {
+            currentLang = lang;
+            const t = LANGS[lang];
+            document.documentElement.lang = lang;
+
+            // Update all text nodes
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.innerHTML = t[key];
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+                const key = el.getAttribute('data-i18n-ph');
+                if (t[key] !== undefined) el.placeholder = t[key];
+            });
+
+            // Update active button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+            });
+
+            // Save preference
+            try { localStorage.setItem('khan_lang', lang); } catch (e) { }
+        }
+
+        // Load saved language
+        try {
+            const saved = localStorage.getItem('khan_lang');
+            if (saved && LANGS[saved]) setLang(saved);
+        } catch (e) { }
+
+        // ══════════════════════════════════════════
         // CURSOR
+        // ══════════════════════════════════════════
         const cur = document.getElementById('cur'), ring = document.getElementById('cur-ring');
         let mx = 0, my = 0, rx = 0, ry = 0;
         document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px' });
         (function animR() { rx += (mx - rx) * .1; ry += (my - ry) * .1; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animR) })();
-        document.querySelectorAll('a,button,.srv-card,.adv-item,.hl-card,.ab-feat,.ab-stat,.proc-step,.soc,.ci-item,.mob-menu a').forEach(el => {
+        document.querySelectorAll('a,button,.srv-card,.adv-item,.hl-card,.ab-feat,.ab-stat,.proc-step,.soc,.ci-item,.mob-menu a,.lang-btn').forEach(el => {
             el.addEventListener('mouseenter', () => { cur.style.width = '12px'; cur.style.height = '12px'; ring.style.width = '48px'; ring.style.height = '48px'; ring.style.borderColor = 'rgba(107,63,231,.8)' });
             el.addEventListener('mouseleave', () => { cur.style.width = '6px'; cur.style.height = '6px'; ring.style.width = '32px'; ring.style.height = '32px'; ring.style.borderColor = 'rgba(107,63,231,.5)' });
         });
@@ -2931,12 +3078,14 @@
         const cObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('[data-t]').forEach(animCount); cObs.unobserve(e.target) } }), { threshold: .3 });
         document.querySelectorAll('.ab-stats').forEach(el => cObs.observe(el));
 
+        // PARALLAX
         window.addEventListener('scroll', () => {
             const y = scrollY;
             const hv = document.querySelector('.hv');
             if (hv) hv.style.transform = `translateY(${y * .08}px)`;
         });
 
+        // FORM
         async function sendForm(e) {
             e.preventDefault();
             const btn = document.getElementById('sbtn'), lr = document.getElementById('lr'), st = document.getElementById('stxt');
@@ -2949,7 +3098,8 @@
                 else { await new Promise(r => setTimeout(r, 1600)); ok = true; }
             } catch (err) { ok = false; }
             btn.disabled = false; st.style.opacity = '1'; lr.style.display = 'none';
-            toast(ok ? 'Заявка успешно отправлена!' : 'Ошибка. Попробуйте ещё раз.', ok ? 'ok' : 'err');
+            const t = LANGS[currentLang];
+            toast(ok ? t['toast.ok'] : t['toast.err'], ok ? 'ok' : 'err');
             if (ok) document.getElementById('cform').reset();
         }
         function toast(msg, type) {
