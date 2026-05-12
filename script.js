@@ -90,7 +90,7 @@ const LANGS = {
         'srv.s4.name': 'Kompleks marketing', 'srv.s4.txt': 'Biznesga mijozlarni jalb qilish, sotish va brendni tizimli ravishda rivojlantirishga yordam beradigan to\'liq marketing harakatlari to\'plami.',
         'srv.s5.name': 'Kontent ishlab chiqarish', 'srv.s5.txt': 'Foto, video, matn, grafika — barchasini kalit ostida yaratamiz. Funnel har bir bosqichida jalb qiladigan va sotadigan kontent.',
         'srv.s6.name': 'SEO-optimallashtirish', 'srv.s6.txt': 'Qidiruv tizimlarida barqaror organik o\'sish uchun texnik audit, semantika, link-biding va kontent strategiyasi.',
-        'about.tag': 'Biz kimiz', 'about.title': 'Kompaniya haqida', 'about.txt': 'Khan — bu maqsadli brendlar uchun premium raqamli mavjudlik qurishga ixtisoslashgan zamonaviy marketing kompaniyasi. Biz biznesga tezroq o\'sishga yordam berish uchun chuqur strategiya, ilg\'or texnologiyalar va yuqori ijodkorlikni birlashtiramiz.',
+        'about.tag': 'Biz kimiz', 'about.title': 'Kompaniya haqida', 'about.txt': 'Khan — bu maqsadli brendlar uchun premium imij qurishga ixtisoslashgan zamonaviy marketing kompaniyasi. Biz biznesga tezroq o\'sishga yordam berish uchun chuqur strategiya, ilg\'or texnologiyalar va yuqori ijodkorlikni birlashtiramiz.',
         'about.f1.t': 'Shaffof hisobot', 'about.f1.s': 'Barcha KPI va kanallar bo\'yicha oylik hisobotlar', 'about.f2.t': 'Natijaga yo\'nalganlik', 'about.f2.s': 'Har bir qaror o\'lchanadigan va ma\'lumotlarga asoslangan', 'about.f3.t': 'Ekspertlar jamoasi', 'about.f3.s': '10+ sohadagi tajribali mutaxassislar', 'about.f4.t': 'Tez ishga tushirish', 'about.f4.s': 'Ishni boshlashdan 2 hafta ichida birinchi natijalar',
         'about.st1': 'Tugallangan loyihalar', 'about.st2': 'Mamnun mijozlar', 'about.st3': 'Yil tajriba',
         'adv.tag': 'Nima uchun Khan', 'adv.title': 'Bizning', 'adv.title2': 'afzalliklarimiz', 'adv.desc': 'Biz shunchaki pudratchi emas — biz biznesingizga chuqur sho\'ng\'iydigan va doimiy nazoratisiz ishlaydigan marketing tizimlari yaratadigan strategik hamkormiz.',
@@ -106,14 +106,14 @@ const LANGS = {
         'hl.c2.lbl': 'Kompaniya', 'hl.c2.title': 'BIZ —<br><span class="outline">HAQIMIZDA</span>', 'hl.c2.desc': 'Maqsadli brendlar uchun raqamli o\'sish tizimlarini quradigan zamonaviy marketing agentligi',
         'hl.c3.lbl': 'Yo\'nalishlar', 'hl.c3.title': 'XIZMATLAR', 'hl.tag1': 'Brending', 'hl.tag2': 'Reklama',
         'hl.c4.lbl': 'Mijozlar', 'hl.c4.title': 'HAMKORLAR',
-        'hl.c5.lbl': 'Qanday ishlaymiz', 'hl.c5.title': 'JAR-<br>AYON',
-        'hl.c6.lbl': 'Bog\'lanish', 'hl.c6.title': 'ALA-<br><span class="outline">QA</span>', 'hl.c6.desc': 'Bizga yozing — bir soat ichida javob beramiz va loyihangizni muhokama qilamiz',
+        'hl.c5.lbl': 'Qanday ishlaymiz', 'hl.c5.title': 'JARA-<br>YON',
+        'hl.c6.lbl': 'Bog\'lanish', 'hl.c6.title': 'ALO-<br><span class="outline">QA</span>', 'hl.c6.desc': 'Bizga yozing — bir soat ichida javob beramiz va loyihangizni muhokama qilamiz',
         'proc.tag': 'Qanday ishlaymiz', 'proc.title': 'Bizning jarayon —', 'proc.title2': 'shaffof va aniq',
         'proc.s1.t': 'Brifing va audit', 'proc.s1.p': 'Biznesingiz, raqobatchilar va maqsadli auditoriyani chuqur tahlil qilamiz. Joriy kanallar va o\'sish nuqtalarini o\'rganamiz.',
         'proc.s2.t': 'Strategiya', 'proc.s2.p': 'Har bir kanal bo\'yicha aniq KPI, byudjet taqsimoti va yo\'l xaritasi bilan batafsil marketing rejasini ishlab chiqamiz.',
         'proc.s3.t': 'Ishga tushirish', 'proc.s3.p': 'Barcha materiallarni yaratamiz, kampaniyalarni sozlaymiz va strategiya tasdiqlangandan so\'ng 7 ish kuni ichida reklamani boshlaymiz.',
         'proc.s4.t': 'O\'sish va optimallashtirish', 'proc.s4.p': 'Ma\'lumotlarni uzluksiz tahlil qilamiz, gipotezalarni sinab ko\'ramiz va biznesingiz uchun eng yaxshi ishlaydigan narsani kengaytiramiz.',
-        'cont.tag': 'Loyihani muhokama qilish', 'cont.title': 'Keling birga', 'cont.title2': 'katta narsa qurайлик', 'cont.desc': 'Brendingizni yangi darajaga olib chiqishga tayyormisiz? Bizga yozing — bir soat ichida dastlabki harakat rejasi bilan qaytamiz.',
+        'cont.tag': 'Loyihani muhokama qilish', 'cont.title': 'Keling birga', 'cont.title2': 'katta narsa qurаylik', 'cont.desc': 'Brendingizni yangi darajaga olib chiqishga tayyormisiz? Bizga yozing — bir soat ichida dastlabki harakat rejasi bilan qaytamiz.',
         'cont.phone': 'Telefon', 'cont.addr': 'Manzil', 'cont.addr.val': 'Buxoro, O\'zbekiston',
         'form.name': 'Ismingiz', 'form.name.ph': 'Ism Familiya', 'form.phone': 'Telefon', 'form.msg': 'Xabar', 'form.msg.ph': 'Loyihangiz haqida gapirib bering...', 'form.submit': 'Ariza yuborish →',
         'footer.copy': '© 2025 Khan Marketing Company<br>Barcha huquqlar himoyalangan',
@@ -196,22 +196,67 @@ window.addEventListener('scroll', () => {
 });
 
 // FORM
+// ═══ КОНФИГ ═══
+const TG_TOKEN  = '8633219020:AAGJ8Pii9YYvMGtzKbvoVuk0RJQFtwawHew';   // от @BotFather
+const TG_CHATID = '-1003783758823';        // например: -1001234567890
+
 async function sendForm(e) {
     e.preventDefault();
-    const btn = document.getElementById('sbtn'), lr = document.getElementById('lr'), st = document.getElementById('stxt');
-    btn.disabled = true; st.style.opacity = '0'; lr.style.display = 'block';
-    const payload = { name: document.getElementById('fn').value, email: document.getElementById('fe').value, phone: document.getElementById('fp').value, message: document.getElementById('fm').value, created_at: new Date().toISOString() };
-    const EP = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+    const btn = document.getElementById('sbtn'),
+          lr  = document.getElementById('lr'),
+          st  = document.getElementById('stxt');
+
+    btn.disabled = true;
+    st.style.opacity = '0';
+    st.style.display = "none"
+    lr.style.display = 'block';
+
+    const name    = document.getElementById('fn').value;
+    const email   = document.getElementById('fe').value;
+    const phone   = document.getElementById('fp').value;
+    const message = document.getElementById('fm').value;
+    const date    = new Date().toLocaleString('ru-RU', { timeZone: 'Asia/Tashkent' });
+
+    const text =
+`🚀 *Новая заявка с сайта Khan*
+
+👤 *Имя:* ${name}
+📧 *Email:* ${email}
+📞 *Телефон:* ${phone}
+💬 *Сообщение:*
+${message}
+
+🕐 *Дата:* ${date}`;
+
     let ok = false;
     try {
-        if (EP !== 'YOUR_GOOGLE_APPS_SCRIPT_URL') { const r = await fetch(EP, { method: 'POST', body: JSON.stringify(payload) }); ok = r.ok; }
-        else { await new Promise(r => setTimeout(r, 1600)); ok = true; }
-    } catch (err) { ok = false; }
-    btn.disabled = false; st.style.opacity = '1'; lr.style.display = 'none';
+        const res = await fetch(
+            `https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id:    TG_CHATID,
+                    text:       text,
+                    parse_mode: 'Markdown'
+                })
+            }
+        );
+        const data = await res.json();
+        ok = data.ok;
+    } catch (err) {
+        ok = false;
+    }
+
+    btn.disabled = false;
+    st.style.opacity = '1';
+    lr.style.display = 'none';
+
     const t = LANGS[currentLang];
     toast(ok ? t['toast.ok'] : t['toast.err'], ok ? 'ok' : 'err');
     if (ok) document.getElementById('cform').reset();
 }
+
 function toast(msg, type) {
     const t = document.getElementById('toast');
     t.textContent = msg; t.className = 'show ' + type;
